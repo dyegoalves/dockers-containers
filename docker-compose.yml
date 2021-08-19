@@ -1,0 +1,19 @@
+version: "3.1"
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./bkpsql:/usr/sql
+      - ./init:/docker-entrypoint-initdb.d
+# Entra no container com  CONTAINER ID - docker ps
+# docker exec -it [ CONTAINER ID ]   bash
+
+# mysql -uroot -proot [ DATABASE-NAME ] < /usr/sql/[name].sql
