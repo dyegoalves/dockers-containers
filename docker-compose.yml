@@ -27,5 +27,5 @@ services:
 # mysql -uroot -pMySql2020! sapienDesenv < /usr/sql/[name].sql
 
 # Libera o usuario para atuar no banco
-# GRANT ALL ON *.* TO 'someuser'@'%' IDENTIFIED BY 'complex-password';
+# GRANT ALL ON *.* TO 'senaidb'@'%' IDENTIFIED BY 'MySql2020! ';
 # FLUSH PRIVILEGES;
