@@ -13,7 +13,19 @@ services:
     volumes:
       - ./bkpsql:/usr/sql
       - ./init:/docker-entrypoint-initdb.d
-# Entra no container com  CONTAINER ID - docker ps
-# docker exec -it [ CONTAINER ID ]   bash
 
-# mysql -uroot -proot [ DATABASE-NAME ] < /usr/sql/[name].sql
+
+# GET id container 
+# docker ps 
+
+# Entra no container com  CONTAINER ID 
+# docker exec -it CONTAINERID bash
+
+# mysql -uroot -proot DATABASENAME < /usr/sql/[name].sql
+
+# Subir a base no container
+# mysql -uroot -pMySql2020! sapienDesenv < /usr/sql/[name].sql
+
+# Libera o usuario para atuar no banco
+# GRANT ALL ON *.* TO 'someuser'@'%' IDENTIFIED BY 'complex-password';
+# FLUSH PRIVILEGES;
